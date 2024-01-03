@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import Swiper from 'swiper';
 
 @Component({
   selector: 'app-home',
@@ -7,6 +8,14 @@ import { Component } from '@angular/core';
 })
 export class HomePage {
 
-  constructor() {}
+isLoading=true;
+ngOnInit(){
+  setTimeout(()=>{
+    this.isLoading=false;
+  },3000)
+}
+    slides = [1, 2, 3, 4, 5];
+
+
 
 }

@@ -1,21 +1,98 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Blank
-    </ion-title>
-  </ion-toolbar>
-</ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
 
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
+<ion-content [fullscreen]="true" class="main-container-wrapper">
+  <div class="container-slider">
+   <div class="loader-container" *ngIf="isLoading">
+    <div class="d-flex justify-content-center">
+      <div class="spinner-border" role="status" style="width: 3rem; height: 3rem; color: #fff;">
+        <span class="sr-only"></span>
+      </div>
+      
+    </div>
+    <p class="mt-2">Please wait app is Loading</p>
+   </div>
+    <swiper-container  *ngIf="!isLoading" class="slider-inner-wrapper-box">
+      <swiper-slide>
+        <div class="top-buttons-div">
+          <div class="icon-box">
+            <ion-icon name="chevron-back-outline"></ion-icon>
+          </div>
+          <div class="icon-box">
+            <ion-icon name="close-outline"></ion-icon>
+          </div>
+        </div>
+        <div class="content-container-box">
+          <div class="small-heading"><h3>This small heading</h3></div>
+          <div class="larg-heading"><h1>This is large Heading</h1></div>
+          <div class="text"><p>Homer - Simply Apartment Search Mobile App UI KIT --- Homer is a wonderful app for anyone to find a suitable hostel,</p></div>
+        </div>
+        <div class="image-div">
+          <img src="../../assets/icon/undraw_Firmware_re_fgdy-removebg-preview.png" alt="">
+        </div>
+        <div class="dots">
+
+          <div class="dot active"></div>
+          <div class="dot"></div>
+          <div class="dot"></div>
+        </div>
+      </swiper-slide>
+      <swiper-slide>
+        <div class="top-buttons-div">
+          <div class="icon-box">
+            <ion-icon name="chevron-back-outline"></ion-icon>
+          </div>
+          <div class="icon-box">
+            <ion-icon name="close-outline"></ion-icon>
+          </div>
+        </div>
+        <div class="content-container-box">
+          <div class="small-heading"><h3>This small heading</h3></div>
+          <div class="larg-heading"><h1>Full Support</h1></div>
+          <div class="text"><p>Homer - Simply Apartment Search Mobile App UI KIT --- Homer is a wonderful app for anyone to find a suitable hostel,</p></div>
+        </div>
+        <div class="image-div">
+          <img src="../../assets/icon/undraw_learning_sketching_nd4f-removebg-preview.png" alt="">
+        </div>
+        <div class="dots">
+
+          <div class="dot "></div>
+          <div class="dot active"></div>
+          <div class="dot"></div>
+        </div>
+
+        <div class="button-container">
+          <button class="button-support">Get support</button>
+        </div>
+      </swiper-slide>
+      <swiper-slide>
+        <div class="top-buttons-div">
+          <div class="icon-box">
+            <ion-icon name="chevron-back-outline"></ion-icon>
+          </div>
+          <div class="icon-box">
+            <ion-icon name="close-outline"></ion-icon>
+          </div>
+        </div>
+        <div class="content-container-box">
+          <div class="small-heading"><h3>This small heading</h3></div>
+          <div class="larg-heading"><h1>Book from anywhere</h1></div>
+          <div class="text"><p>Homer - Simply Apartment Search Mobile App UI KIT --- Homer is a wonderful app for anyone to find a suitable hostel,</p></div>
+        </div>
+        <div class="image-div">
+          <img src="../../assets/icon/undraw_Coding_re_iv62-removebg-preview.png" alt="">
+        </div>
+        <div class="dots">
+
+          <div class="dot"></div>
+          <div class="dot"></div>
+          <div class="dot active"></div>
+        </div>
+       
+      </swiper-slide>
+
+
+
+    </swiper-container>
 
   </div>
 </ion-content>
