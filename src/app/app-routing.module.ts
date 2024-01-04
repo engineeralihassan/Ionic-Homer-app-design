@@ -11,6 +11,10 @@ const routes: Routes = [
   loadChildren: () => import('./login/login.module').then(m => m.LoginPageModule)
 },
 {
+  path: 'send-code-again',
+  loadChildren: () => import('./again-pass/again-pass.module').then(m => m.AgainPassPageModule)
+},
+{
   path: 'forget-passward',
   loadChildren: () => import('./forget-pass/forget-pass.module').then(m => m.ForgetPassPageModule)
 },
@@ -26,6 +30,10 @@ const routes: Routes = [
   {
     path: 'forget-pass',
     loadChildren: () => import('./forget-pass/forget-pass.module').then( m => m.ForgetPassPageModule)
+  },
+  {
+    path: 'again-pass',
+    loadChildren: () => import('./again-pass/again-pass.module').then( m => m.AgainPassPageModule)
   },
 ];
 
