@@ -11,6 +11,10 @@ const routes: Routes = [
   loadChildren: () => import('./login/login.module').then(m => m.LoginPageModule)
 },
 {
+  path: 'forget-passward',
+  loadChildren: () => import('./forget-pass/forget-pass.module').then(m => m.ForgetPassPageModule)
+},
+{
   path: 'signup',
   loadChildren: () => import('./signup/signup.module').then(m => m.SignupPageModule)
 },
@@ -18,6 +22,10 @@ const routes: Routes = [
     path: '',
     redirectTo: 'home',
     pathMatch: 'full'
+  },
+  {
+    path: 'forget-pass',
+    loadChildren: () => import('./forget-pass/forget-pass.module').then( m => m.ForgetPassPageModule)
   },
 ];
 
