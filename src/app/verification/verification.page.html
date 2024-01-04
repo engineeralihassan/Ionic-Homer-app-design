@@ -8,7 +8,7 @@
        <ion-icon name="chevron-back-outline"></ion-icon>
      </div>
      <div class="icon-box">
-       <h3>Resend code</h3>
+       <h3>Mobile verificaion</h3>
      </div>
      <div class="icon-box">
        <ion-icon name="close-outline"></ion-icon>
@@ -20,49 +20,53 @@
   </div>
   <div class="second-section">
  <div class="header-content">
-   <h2>Forget Passward</h2>
-   <p>if you don't get email yet get the code on sms or email again</p>
+   <h2>Enter recovery code</h2>
+   <p>we send a 4 digit code on your email please enter this code to recover passward</p>
  </div>
  <div class="social-signins">
    
   <div class="code-send-options">
-    <div class="send-option shadow">
-      <div class="send-icon"><ion-icon name="mail-outline"></ion-icon></div>
-      <div class="send-tex">
-       <div class="selected-img"> <h3>Resend via email</h3> <img src="../../assets/validinput.png" alt=""></div>
-        <p>click to resend verification code via email</p>
+
+    <div class="send-option">
+      <div class="inputfield">
+        <input   id="otp-input-0" type="number" maxlength="1" class="input" [(ngModel)]="otp[0]" [disabled]="isInputDisabled(0)" (input)="handleInput(0, $event)" />
+        <input  id="otp-input-1" type="number" maxlength="1" class="input" [(ngModel)]="otp[1]" [disabled]="isInputDisabled(1)" (input)="handleInput(1, $event)" />
+        <input  id="otp-input-2" type="number" maxlength="1" class="input" [(ngModel)]="otp[2]" [disabled]="isInputDisabled(2)" (input)="handleInput(2, $event)" />
+        <input type="number" id="otp-input-3" maxlength="1" class="input" [(ngModel)]="otp[3]" [disabled]="isInputDisabled(3)" (input)="handleInput(3, $event)" />
       </div>
+      
+
     </div>
 
-    <div class="send-option shadow">
-      <div class="send-icon"><ion-icon name="phone-portrait-outline"></ion-icon></div>
-      <div class="send-tex">
-        <h3>Resend via SMS</h3>
-        <p>click to resend verification code on mobile via sms</p>
-      </div>
-    </div>
+
   </div>
  
-   <div class="login-form-container">
-     <form class="login-form">
-       <div class="input-container">
-         <label class=form-label>Email Address</label>
-         <div class="form-input">
-           <input type="email"  placeholder="Enter email">
-           <img src="../../assets/validinput.png" alt="">
-         </div>
-       </div>
 
- 
-       <div class="button-container">
-         <button class="button-support" routerLink="/send-code-again">send</button>
-       </div>
-      
-     </form>
-    </div>
  </div>
   </div>
   <div class="third-section">
+    
+    <div class="keyborard">
+      <div class="row button-row">
+        <div class="co" (click)="onKeyboardButtonClick(1)">1</div>
+        <div class="co" (click)="onKeyboardButtonClick(2)">2</div>
+        <div class="co" (click)="onKeyboardButtonClick(3)">3</div>
+      </div>
+      <div class="row button-row">
+        <div class="co" (click)="onKeyboardButtonClick(4)">4</div>
+        <div class="co" (click)="onKeyboardButtonClick(5)">5</div>
+        <div class="co" (click)="onKeyboardButtonClick(6)">6</div>
+      </div>
+      <div class="row button-row">
+        <div class="co" (click)="onKeyboardButtonClick(7)">7</div>
+        <div class="co" (click)="onKeyboardButtonClick(8)">8</div>
+        <div class="co" (click)="onKeyboardButtonClick(9)">9</div>
+      </div>
+      <div class="row last-row">
+        <div class="co" (click)="onKeyboardButtonClick(0)">0</div>
+      </div>
+    </div>
+    
 
   </div>
  

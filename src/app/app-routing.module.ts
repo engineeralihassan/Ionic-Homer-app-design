@@ -15,6 +15,10 @@ const routes: Routes = [
   loadChildren: () => import('./again-pass/again-pass.module').then(m => m.AgainPassPageModule)
 },
 {
+  path: 'verification',
+  loadChildren: () => import('./verification/verification.module').then(m => m.VerificationPageModule)
+},
+{
   path: 'forget-passward',
   loadChildren: () => import('./forget-pass/forget-pass.module').then(m => m.ForgetPassPageModule)
 },
