@@ -261,3 +261,91 @@ ion-content {
 
     }
   }
+
+
+  @media(min-width:769px){
+  
+    .all-divs-wrapper{
+      border: 1px solid red;
+    }
+  
+    .first-section{
+      min-height: 200px;
+    }
+
+
+    .icon-box ion-icon{
+      font-size: 40px;
+    }
+    .img-container-div{
+      width: 80%;
+      height: 13rem;
+      margin: auto;
+      padding-bottom: 20px;
+    }
+  
+    .second-section{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+    }
+    .header-content{
+      margin-top: 30px;
+      h2{
+          color: black;
+          font-size: 24px;
+          font-weight: bold;
+  
+      }
+      p{
+
+          margin-top: 10px;
+      }
+    }
+    .social-signins{
+      width: 70%;
+    }
+  
+  }
+
+  @media(min-width:919px){
+  
+    .all-divs-wrapper{
+      border: 2px solid green;
+    }
+  
+    .first-section{
+      min-height: 350px;
+    }
+
+
+    .icon-box ion-icon{
+      font-size: 50px;
+    }
+    .img-container-div{
+      height: 17rem;
+    }
+
+    .header-content{
+      h2{
+          font-size: 35px;
+  
+      }
+      p{
+
+          margin-top: 10px;
+          font-size: 20px;
+      }
+    }
+    .social-signins{
+      width: 70%;
+    }
+  
+  }
+
+  @media(min-width:1200px){
+    .social-signins{
+      width: 55%;
+    }
+  }
